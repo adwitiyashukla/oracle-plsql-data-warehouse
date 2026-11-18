@@ -1,0 +1,9 @@
+Prscrbr_NPI,Prscrbr_Last_Org_Name,Prscrbr_First_Name,Prscrbr_City,Prscrbr_State_Abrvtn,Prscrbr_State_FIPS,Prscrbr_Type,Prscrbr_Type_Src,Brnd_Name,Gnrc_Name,Tot_Clms,Tot_30day_Fills,Tot_Day_Suply,Tot_Drug_Cst,Tot_Benes,GE65_Sprsn_Flag,GE65_Tot_Clms,GE65_Tot_30day_Fills,GE65_Tot_Drug_Cst,GE65_Tot_Day_Suply,GE65_Bene_Sprsn_Flag,GE65_Tot_Benes
+1004237511,Adams,Ruth,Cincinnati,OH,39,Family Practice,Claim-Specialty,Lisinopril,Lisinopril,125,135,3750,980.00,47,,104,112,820.25,3120,,40
+1053826198,Baker,Omar,Columbus,OH,39,Internal Medicine,Claim-Specialty,Atorvastatin Calcium,Atorvastatin Calcium,185,196,5880,1710.00,65,,166,176,1540.90,5280,,58
+1053826198,Baker,Omar,Columbus,OH,39,Internal Medicine,Claim-Specialty,Tylenol-Codeine No.3,Acetaminophen With Codeine,14,14,140,98.60,12,,11,11,77.50,110,*,
+1129604736,Clark,Lena,Toledo,OH,39,Cardiology,Claim-Specialty,Eliquis,Apixaban,70,75,2250,39100.00,25,,64,68,35700.00,2040,,23
+1315709281,Evans Family Health,,Cleveland,OH,39,Family Practice,Claim-Specialty,Amoxicillin,Amoxicillin,28,28,280,230.40,25,,19,19,150.10,190,,17
+1438620574,Foster,Ivy,Cleveland,OH,39,Dentist,Claim-Specialty,Amoxicillin,Amoxicillin,18,18,126,95.20,16,,12,12,61.00,84,,11
+,Grant,Paul,Columbus,OH,39,Family Practice,Claim-Specialty,Lisinopril,Lisinopril,20,20,600,150.00,15,,15,15,110.00,450,,11
+1004237511,Adams,Ruth,Cincinnati,OH,39,Family Practice,Claim-Specialty,Metformin Hcl,,40,40,1200,180.00,30,,35,35,150.00,1050,,26

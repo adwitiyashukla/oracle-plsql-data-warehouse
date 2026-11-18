@@ -1,0 +1,55 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  fetch-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - run: pytest tests/test_fetch.py -v
+
+  oracle-tests:
+    runs-on: ubuntu-latest
+    env:
+      ORACLE_PASSWORD: ci_sys_Pw1
+      GRANARY_PASSWORD: ci_app_Pw1
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: start Oracle 26ai Free
+        run: |
+          docker run -d --name oracle -p 1521:1521 \
+            -e ORACLE_PASSWORD="$ORACLE_PASSWORD" \
+            -v "$GITHUB_WORKSPACE":/granary \
+            gvenzl/oracle-free:23.26.3-faststart
+          for i in $(seq 1 90); do
+            if docker logs oracle 2>&1 | grep -q "DATABASE IS READY TO USE"; then
+              exit 0
+            fi
+            sleep 5
+          done
+          docker logs oracle
+          exit 1
+
+      - name: create the granary user
+        run: >
+          docker exec oracle sqlplus -s -l "sys/$ORACLE_PASSWORD@//localhost/FREEPDB1 as sysdba"
+          @/granary/sql/admin.sql granary "$GRANARY_PASSWORD" /granary/tests/fixtures /tmp
+
+      - name: install the schema
+        run: >
+          docker exec oracle sqlplus -s -l "granary/$GRANARY_PASSWORD@//localhost/FREEPDB1"
+          @/granary/sql/install.sql
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -r requirements.txt
+      - run: pytest tests/test_chain.py tests/test_pipeline.py -v

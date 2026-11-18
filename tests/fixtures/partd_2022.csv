@@ -1,0 +1,8 @@
+Prscrbr_NPI,Prscrbr_Last_Org_Name,Prscrbr_First_Name,Prscrbr_City,Prscrbr_State_Abrvtn,Prscrbr_State_FIPS,Prscrbr_Type,Prscrbr_Type_Src,Brnd_Name,Gnrc_Name,Tot_Clms,Tot_30day_Fills,Tot_Day_Suply,Tot_Drug_Cst,Tot_Benes,GE65_Sprsn_Flag,GE65_Tot_Clms,GE65_Tot_30day_Fills,GE65_Tot_Drug_Cst,GE65_Tot_Day_Suply,GE65_Bene_Sprsn_Flag,GE65_Tot_Benes
+1004237511,Adams,Ruth,Cincinnati,OH,39,Family Practice,Claim-Specialty,Lisinopril,Lisinopril,120,130,3600,950.40,45,,100,108,790.10,3000,,38
+1004237511,Adams,Ruth,Cincinnati,OH,39,Family Practice,Claim-Specialty,Eliquis,Apixaban,60,62,1860,31250.75,22,,55,57,28640.20,1710,,20
+1053826198,Baker,Omar,Dayton,OH,39,Internal Medicine,Claim-Specialty,Atorvastatin Calcium,Atorvastatin Calcium,200,210,6300,1890.00,70,,180,190,1701.00,5700,,63
+1053826198,Baker,Omar,Dayton,OH,39,Internal Medicine,Claim-Specialty,Boostrix Tdap,"Diphth,pertuss(Acell),tet Vac",12,12,12,648.26,12,,12,12,648.26,12,,12
+1129604736,Clark,Lena,Toledo,OH,39,Internal Medicine,Claim-Specialty,Ozempic,Semaglutide,40,44,1320,39800.00,11,*,,,,,*,
+1129604736,Clark,Lena,Toledo,OH,39,Internal Medicine,Claim-Specialty,Lisinopril,Lisinopril,25,25,750,210.30,,#,,,,,*,
+1208473656,Diaz,Sam,Akron,OH,39,Nurse Practitioner,Claim-Specialty,Amoxicillin,Amoxicillin,15,15,150,120.75,13,,11,11,88.40,110,*,

@@ -1,0 +1,7 @@
+Prscrbr_NPI,Prscrbr_Last_Org_Name,Prscrbr_First_Name,Prscrbr_City,Prscrbr_State_Abrvtn,Prscrbr_State_FIPS,Prscrbr_Type,Prscrbr_Type_Src,Brnd_Name,Gnrc_Name,Tot_Clms,Tot_30day_Fills,Tot_Day_Suply,Tot_Drug_Cst,Tot_Benes,GE65_Sprsn_Flag,GE65_Tot_Clms,GE65_Tot_30day_Fills,GE65_Tot_Drug_Cst,GE65_Tot_Day_Suply,GE65_Bene_Sprsn_Flag,GE65_Tot_Benes
+1004237511,Adams,Ruth,Cincinnati,OH,39,Family Practice,Claim-Specialty,Lisinopril,Lisinopril,118,128,3540,930.10,44,,98,105,780.00,2950,,37
+1004237511,Adams,Ruth,Cincinnati,OH,39,Family Practice,Claim-Specialty,Eliquis,Apixaban,66,70,2100,35400.00,24,,60,63,32200.50,1890,,22
+1004237511,Adams,Ruth,Cincinnati,OH,39,Family Practice,Claim-Specialty,Amoxicillin,Amoxicillin,12a,12,120,95.00,11,,,,,,*,
+1053826198,Baker,Omar,Columbus,OH,39,Internal Medicine,Claim-Specialty,Atorvastatin Calcium,Atorvastatin Calcium,190,200,6000,1755.55,66,,170,180,1600.20,5400,,60
+1129604736,Clark,Lena,Toledo,OH,39,Internal Medicine,Claim-Specialty,Ozempic,Semaglutide,52,58,1740,52900.10,14,,45,50,45800.00,1500,,12
+1315709281,Evans Family Health,,Cleveland,OH,39,Family Practice,Claim-Specialty,Amoxicillin,Amoxicillin,30,30,300,240.00,27,,20,20,160.00,200,,18
