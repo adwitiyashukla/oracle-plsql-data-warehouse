@@ -118,7 +118,7 @@ set GRANARY_USER=granary_test
 .venv\Scripts\pytest
 ```
 
-CI on GitHub Actions starts the `gvenzl/oracle-free` 23.26.3 container, creates the user, installs the schema and runs all the tests.
+CI on GitHub Actions starts the `gvenzl/oracle-free` 23.26.3 container, creates the user, installs the schema and runs all the tests. That image sets `JOB_QUEUE_PROCESSES` to 1, and my first CI run hung there: the chain job itself holds that one job slot, so its steps never start. CI now raises it to 10 before the tests.
 
 ## Files
 

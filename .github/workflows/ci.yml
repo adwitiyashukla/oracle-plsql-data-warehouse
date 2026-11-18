@@ -8,8 +8,8 @@ jobs:
   fetch-tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
@@ -17,11 +17,12 @@ jobs:
 
   oracle-tests:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     env:
       ORACLE_PASSWORD: ci_sys_Pw1
       GRANARY_PASSWORD: ci_app_Pw1
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: start Oracle 26ai Free
         run: |
@@ -38,6 +39,11 @@ jobs:
           docker logs oracle
           exit 1
 
+      - name: let the scheduler run more than one job
+        run: |
+          printf 'whenever sqlerror exit failure\nalter system set job_queue_processes = 10;\nexit\n' \
+            | docker exec -i oracle sqlplus -s -l / as sysdba
+
       - name: create the granary user
         run: >
           docker exec oracle sqlplus -s -l "sys/$ORACLE_PASSWORD@//localhost/FREEPDB1 as sysdba"
@@ -48,7 +54,7 @@ jobs:
           docker exec oracle sqlplus -s -l "granary/$GRANARY_PASSWORD@//localhost/FREEPDB1"
           @/granary/sql/install.sql
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
       - run: pip install -r requirements.txt
